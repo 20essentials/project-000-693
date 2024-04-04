@@ -1,0 +1,38 @@
+body,
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  margin: 0;
+  background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+
+.drum-kit {
+  display: flex;
+  width: 800px;
+  position: relative;
+  transform: translateY(50px);
+
+  @media (width <= 1111px) {
+    zoom: 0.64;
+  }
+  @media (width <= 1111px) and (orientation: portrait) {
+    zoom: 0.4;
+  }
+}
+
+drums-cymbal:nth-child(1) {
+  transform: translateX(0px) scaleX(-1);
+}
+
+drums-bass[type='kick'] {
+  transform: translate(-250px, 65px);
+  z-index: 50;
+}
+
+.group {
+  display: flex;
+  transform: translateX(-200px);
+}
